@@ -1,0 +1,234 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://oauth-api.beatport.com/identity/1/oauth/request-token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.3
+      Content-Length:
+      - '0'
+      Authorization:
+      - OAuth oauth_callback="oob", oauth_consumer_key="fake",
+        oauth_nonce="xXaYhCOschUQBzfxOGSkP2Iaz6ylUWsSpqFY6aSQ", oauth_signature="ECiiB2zTUHnD6OFTHV9ScLlhAxU%3D",
+        oauth_signature_method="HMAC-SHA1", oauth_timestamp="1504025698", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 29 Aug 2017 16:54:59 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Allow:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Access-Control-Allow-Headers:
+      - content-type, Authorization
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '190'
+      Content-Type:
+      - text/plain; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: login_url=https%3A%2F%2Foauth-api.beatport.com%2Fidentity%2F1%2Foauth%2Fauthorize%3Foauth_token%3D42eb791ffd257ca14d6156c665d0abc002fd2033&oauth_token=42eb791ffd257ca14d6156c665d0abc002fd2033&oauth_token_secret=b782a75e92a39eb19620a5d780f4be217c4125a3&oauth_callback_confirmed=true
+    http_version:
+  recorded_at: Tue, 29 Aug 2017 16:55:00 GMT
+- request:
+    method: post
+    uri: https://oauth-api.beatport.com/identity/1/oauth/authorize-submit
+    body:
+      encoding: UTF-8
+      string: oauth_token=42eb791ffd257ca14d6156c665d0abc002fd2033&username=fake&password=fake&submit=Login
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 29 Aug 2017 16:55:01 GMT
+      Server:
+      - Apache
+      Set-Cookie:
+      - PHPSESSID=8ddr1j0thugdurj065elbs1ei2; path=/
+      Expires:
+      - Thu, 19 Nov 1981 08:52:00 GMT
+      Cache-Control:
+      - no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+      Pragma:
+      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Allow:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Access-Control-Allow-Headers:
+      - content-type, Authorization
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '124'
+      Content-Type:
+      - text/plain; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: oauth_token=42eb791ffd257ca14d6156c665d0abc002fd2033&oauth_verifier=20125400f777698f1af26cb14f33d07a&oauth_callback_confirmed=true
+    http_version:
+  recorded_at: Tue, 29 Aug 2017 16:55:01 GMT
+- request:
+    method: post
+    uri: https://oauth-api.beatport.com/identity/1/oauth/access-token
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Authorization:
+      - OAuth oauth_consumer_key="fake", oauth_nonce="9QcHvxBOnqKgWEsFmCDzQKvCJa0eILo6yfFvjDhJ3M",
+        oauth_signature="3d2Wp5DjxhKGuaRi3huxpLqWPUE%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1504025701", oauth_token="42eb791ffd257ca14d6156c665d0abc002fd2033",
+        oauth_verifier="20125400f777698f1af26cb14f33d07a", oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 29 Aug 2017 16:55:02 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Allow:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Access-Control-Allow-Headers:
+      - content-type, Authorization
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '154'
+      Content-Type:
+      - text/plain; charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: oauth_token=fake&oauth_token_secret=fake123&session_id=20125400f777698f1af26cb14f33d07a&oauth_callback_confirmed=true
+    http_version:
+  recorded_at: Tue, 29 Aug 2017 16:55:02 GMT
+- request:
+    method: get
+    uri: https://oauth-api.beatport.com/catalog/3/tracks?sortBy=releaseDate%20ASC
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - OAuth gem v0.5.3
+      Authorization:
+      - OAuth oauth_consumer_key="fake", oauth_nonce="GqneK0Z3e1D1cnUWtFky3wyrd0KUDvxuZsQ21S5Y4",
+        oauth_signature="ZjibkOXCSqIBUugdfzXKyFmVFXg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1504025703", oauth_token="fake",
+        oauth_version="1.0"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 29 Aug 2017 16:55:04 GMT
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Allow:
+      - DELETE, GET, HEAD, OPTIONS, POST, PUT
+      Access-Control-Allow-Headers:
+      - content-type, Authorization
+      Expires:
+      - Tue, 29 Aug 2017 17:25:04 GMT
+      Pragma:
+      - public
+      Cache-Control:
+      - public, max-age=1800
+      Vary:
+      - Accept-Encoding
+      Transfer-Encoding:
+      - chunked
+      Content-Type:
+      - application/json
+    body:
+      encoding: ASCII-8BIT
+      string: '{"metadata":{"host":"oauth-api.beatport.com","path":"\/catalog\/tracks","query":"sortBy=releaseDate+ASC","page":1,"perPage":10,"count":6835152,"totalPages":683516,"nextQuery":"sortBy=releaseDate+ASC&page=2","perPageOptions":[{"value":50,"applyQuery":"sortBy=releaseDate+ASC&perPage=50"},{"value":100,"applyQuery":"sortBy=releaseDate+ASC&perPage=100"},{"value":150,"applyQuery":"sortBy=releaseDate+ASC&perPage=150"}],"facets":{"fields":[]},"appliedFacets":[],"dateFilters":[{"name":"today","startDate":"2017-08-29","endDate":"2017-08-29","applyQuery":"sortBy=releaseDate+ASC&publishDateStart=2017-08-29&publishDateEnd=2017-08-29","applied":false},{"name":"yesterday","startDate":"2017-08-28","endDate":"2017-08-29","applyQuery":"sortBy=releaseDate+ASC&publishDateStart=2017-08-28&publishDateEnd=2017-08-29","applied":false},{"name":"weekToDate","startDate":"2017-08-22","endDate":"2017-08-29","applyQuery":"sortBy=releaseDate+ASC&publishDateStart=2017-08-22&publishDateEnd=2017-08-29","applied":false},{"name":"monthToDate","startDate":"2017-07-29","endDate":"2017-08-29","applyQuery":"sortBy=releaseDate+ASC&publishDateStart=2017-07-29&publishDateEnd=2017-08-29","applied":false},{"name":"yearToDate","startDate":"2016-08-29","endDate":"2017-08-29","applyQuery":"sortBy=releaseDate+ASC&publishDateStart=2016-08-29&publishDateEnd=2017-08-29","applied":false},{"custom":true,"name":"customRange","applied":false,"applyQuery":"sortBy=releaseDate+ASC"}],"rangeFilters":{"bpm":{"custom":true,"rangeName":"bpm","applied":false,"applyQuery":"sortBy=releaseDate+ASC"}},"spellcheck":null},"results":[{"id":9369755,"selected":false,"type":"track","sku":"track-9369755","name":"Cognitive
+        Disonance","trackNumber":1,"active":true,"mixName":"Original Mix","title":"Cognitive
+        Disonance (Original Mix)","slug":"cognitive-disonance-original-mix","isrc":"QMRZS1700314","releaseDate":"1900-04-23","publishDate":"1900-04-23","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/9369755.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/9369755.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/9369755.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/9369755.LOFI.mp3","rtmp":"null","offset":{"start":180112,"end":300112}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/9369755.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/9369755.LOFI.mp4","rtmp":"null","offset":{"start":180112,"end":300112}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"7:30","lengthMs":450281,"bpm":112,"key":{"standard":{"letter":"A","sharp":false,"flat":false,"chord":"minor"},"shortName":"Amin"},"saleType":"purchase","artists":[{"id":567553,"name":"Acrobotik","slug":"acrobotik","type":"artist"}],"genres":[{"id":6,"name":"Techno","slug":"techno","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":2033667,"name":"ACRO-COG-DIS-THEO","type":"release","slug":"acro-cog-dis-theo"},"label":{"id":45504,"name":"Enigmatic
+        Output","type":"label","slug":"enigmatic-output","status":true},"images":{"small":{"id":491534,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/491534.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/491534.jpg"},"medium":{"id":10627975,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/10627975.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/10627975.jpg"},"large":{"id":16071992,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/16071992.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/16071992.jpg"},"waveform":{"id":16072224,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/16072224.png","secureUrl":"https:\/\/media.beatport.com\/image\/16072224.png"}},"dynamicImages":{"main":{"id":16071992,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/16071992.jpg"},"waveform":{"id":16072224,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/16072224.png"}}},{"id":9369756,"selected":false,"type":"track","sku":"track-9369756","name":"Distance
+        Girdle","trackNumber":2,"active":true,"mixName":"Original Mix","title":"Distance
+        Girdle (Original Mix)","slug":"distance-girdle-original-mix","isrc":"QMRZS1700203","releaseDate":"1900-04-23","publishDate":"1900-04-23","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/9369756.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/9369756.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/9369756.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/9369756.LOFI.mp3","rtmp":"null","offset":{"start":133714,"end":253714}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/9369756.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/9369756.LOFI.mp4","rtmp":"null","offset":{"start":133714,"end":253714}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"5:34","lengthMs":334285,"bpm":112,"key":{"standard":{"letter":"G","sharp":false,"flat":false,"chord":"minor"},"shortName":"Gmin"},"saleType":"purchase","artists":[{"id":567553,"name":"Acrobotik","slug":"acrobotik","type":"artist"}],"genres":[{"id":6,"name":"Techno","slug":"techno","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":2033667,"name":"ACRO-COG-DIS-THEO","type":"release","slug":"acro-cog-dis-theo"},"label":{"id":45504,"name":"Enigmatic
+        Output","type":"label","slug":"enigmatic-output","status":true},"images":{"small":{"id":491534,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/491534.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/491534.jpg"},"medium":{"id":10627975,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/10627975.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/10627975.jpg"},"large":{"id":16071992,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/16071992.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/16071992.jpg"},"waveform":{"id":16073204,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/16073204.png","secureUrl":"https:\/\/media.beatport.com\/image\/16073204.png"}},"dynamicImages":{"main":{"id":16071992,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/16071992.jpg"},"waveform":{"id":16073204,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/16073204.png"}}},{"id":6442507,"selected":false,"type":"track","sku":"track-6442507","name":"Legs","trackNumber":1,"active":true,"mixName":"Original
+        Mix","title":"Legs (Original Mix)","slug":"legs-original-mix","isrc":"GBHCD1150002","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442507.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442507.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442507.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442507.LOFI.mp3","rtmp":"null","offset":{"start":4533,"end":124533}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442507.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442507.LOFI.mp4","rtmp":"null","offset":{"start":4533,"end":124533}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"2:04","lengthMs":124533,"bpm":98,"key":{"standard":{"letter":"F","sharp":true,"flat":false,"chord":"minor"},"shortName":"F&#9839;min"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202875,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202875.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202875.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202875,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202875.png"}}},{"id":6442508,"selected":false,"type":"track","sku":"track-6442508","name":"Aging
+        With Dignity","trackNumber":2,"active":true,"mixName":"Original Mix","title":"Aging
+        With Dignity (Original Mix)","slug":"aging-with-dignity-original-mix","isrc":"GBHCD1150003","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442508.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442508.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442508.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442508.LOFI.mp3","rtmp":"null","offset":{"start":66626,"end":186626}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442508.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442508.LOFI.mp4","rtmp":"null","offset":{"start":66626,"end":186626}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"3:06","lengthMs":186626,"bpm":97,"key":{"standard":{"letter":"C","sharp":false,"flat":false,"chord":"major"},"shortName":"Cmaj"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202909,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202909.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202909.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202909,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202909.png"}}},{"id":6442509,"selected":false,"type":"track","sku":"track-6442509","name":"Subway
+        Heart","trackNumber":3,"active":true,"mixName":"Original Mix","title":"Subway
+        Heart (Original Mix)","slug":"subway-heart-original-mix","isrc":"GBHCD1150004","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442509.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442509.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442509.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442509.LOFI.mp3","rtmp":"null","offset":{"start":45466,"end":165466}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442509.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442509.LOFI.mp4","rtmp":"null","offset":{"start":45466,"end":165466}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"2:45","lengthMs":165466,"bpm":130,"key":{"standard":{"letter":"F","sharp":false,"flat":false,"chord":"major"},"shortName":"Fmaj"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202929,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202929.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202929.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202929,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202929.png"}}},{"id":6442510,"selected":false,"type":"track","sku":"track-6442510","name":"Killing
+        Time","trackNumber":4,"active":true,"mixName":"Original Mix","title":"Killing
+        Time (Original Mix)","slug":"killing-time-original-mix","isrc":"GBHCD1150005","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442510.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442510.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442510.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442510.LOFI.mp3","rtmp":"null","offset":{"start":54440,"end":174440}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442510.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442510.LOFI.mp4","rtmp":"null","offset":{"start":54440,"end":174440}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"2:54","lengthMs":174440,"bpm":124,"key":{"standard":{"letter":"G","sharp":false,"flat":false,"chord":"minor"},"shortName":"Gmin"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202952,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202952.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202952.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202952,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202952.png"}}},{"id":6442511,"selected":false,"type":"track","sku":"track-6442511","name":"Corridor","trackNumber":5,"active":true,"mixName":"Original
+        Mix","title":"Corridor (Original Mix)","slug":"corridor-original-mix","isrc":"GBHCD1150006","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442511.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442511.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442511.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442511.LOFI.mp3","rtmp":"null","offset":{"start":0,"end":118266}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442511.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442511.LOFI.mp4","rtmp":"null","offset":{"start":0,"end":118266}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"1:58","lengthMs":118266,"bpm":87,"key":null,"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202943,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202943.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202943.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202943,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202943.png"}}},{"id":6442512,"selected":false,"type":"track","sku":"track-6442512","name":"Lost
+        Causes","trackNumber":6,"active":true,"mixName":"Original Mix","title":"Lost
+        Causes (Original Mix)","slug":"lost-causes-original-mix","isrc":"GBHCD1150007","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442512.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442512.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442512.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442512.LOFI.mp3","rtmp":"null","offset":{"start":75266,"end":195266}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442512.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442512.LOFI.mp4","rtmp":"null","offset":{"start":75266,"end":195266}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"3:15","lengthMs":195266,"bpm":98,"key":{"standard":{"letter":"A","sharp":true,"flat":false,"chord":"minor"},"shortName":"A&#9839;min"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202874,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202874.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202874.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202874,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202874.png"}}},{"id":6442513,"selected":false,"type":"track","sku":"track-6442513","name":"Not
+        The Person We Knew","trackNumber":7,"active":true,"mixName":"Original Mix","title":"Not
+        The Person We Knew (Original Mix)","slug":"not-the-person-we-knew-original-mix","isrc":"GBHCD1150008","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442513.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442513.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442513.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442513.LOFI.mp3","rtmp":"null","offset":{"start":77600,"end":197600}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442513.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442513.LOFI.mp4","rtmp":"null","offset":{"start":77600,"end":197600}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"3:17","lengthMs":197600,"bpm":89,"key":{"standard":{"letter":"A","sharp":false,"flat":false,"chord":"minor"},"shortName":"Amin"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202931,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202931.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202931.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202931,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202931.png"}}},{"id":6442514,"selected":false,"type":"track","sku":"track-6442514","name":"Bones","trackNumber":8,"active":true,"mixName":"Original
+        Mix","title":"Bones (Original Mix)","slug":"bones-original-mix","isrc":"GBHCD1150009","releaseDate":"1905-06-03","publishDate":"1905-06-03","preOrderDate":null,"sampleUrl":"http:\/\/geo-samples.beatport.com\/lofi\/6442514.LOFI.mp3","sampleSecureUrl":"https:\/\/geo-samples.beatport.com\/lofi\/6442514.LOFI.mp3","isPreviewAvailable":true,"isAvailableForMix":true,"rtmpStreamUrl":"null","exclusive":false,"isPreOrder":false,"isTraktorRemixSet":false,"guest_pick":false,"sponsored":false,"isPromotable":false,"preview":{"mp3":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442514.LOFI.mp3","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442514.LOFI.mp3","rtmp":"null","offset":{"start":0,"end":101733}},"mp4":{"http":"http:\/\/geo-samples.beatport.com\/lofi\/6442514.LOFI.mp4","https":"https:\/\/geo-samples.beatport.com\/lofi\/6442514.LOFI.mp4","rtmp":"null","offset":{"start":0,"end":101733}}},"price":{"code":"usd","symbol":"$","value":149,"display":"$1.49"},"audioFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"losslessUpgradeFormatFee":{"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"preOrderFormatFees":{"aiff":{"code":"usd","symbol":"$","value":75,"display":"$0.75"},"wav":{"code":"usd","symbol":"$","value":75,"display":"$0.75"}},"purchasable":true,"currentStatus":"General
+        Content","length":"1:41","lengthMs":101733,"bpm":113,"key":{"standard":{"letter":"A","sharp":false,"flat":false,"chord":"minor"},"shortName":"Amin"},"saleType":"purchase","artists":[{"id":310728,"name":"Massacre","slug":"massacre","type":"artist"}],"genres":[{"id":39,"name":"Dance","slug":"dance","type":"genre"}],"subGenres":[],"charts":[],"release":{"id":1490821,"name":"Killing
+        Time","type":"release","slug":"killing-time"},"label":{"id":18863,"name":"Celluloid","type":"label","slug":"celluloid","status":true},"images":{"small":{"id":933658,"width":30,"height":30,"url":"https:\/\/geo-media.beatport.com\/image\/933658.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933658.jpg"},"medium":{"id":933659,"width":60,"height":60,"url":"https:\/\/geo-media.beatport.com\/image\/933659.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/933659.jpg"},"large":{"id":11202833,"width":500,"height":500,"url":"https:\/\/geo-media.beatport.com\/image\/11202833.jpg","secureUrl":"https:\/\/media.beatport.com\/image\/11202833.jpg"},"waveform":{"id":11202870,"width":1500,"height":250,"url":"https:\/\/geo-media.beatport.com\/image\/11202870.png","secureUrl":"https:\/\/media.beatport.com\/image\/11202870.png"}},"dynamicImages":{"main":{"id":11202833,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202833.jpg"},"waveform":{"id":11202870,"url":"\/\/geo-media.beatport.com\/image_size{hq}\/{w}x{h}\/11202870.png"}}}]}'
+    http_version:
+  recorded_at: Tue, 29 Aug 2017 16:55:05 GMT
+recorded_with: VCR 3.0.3
