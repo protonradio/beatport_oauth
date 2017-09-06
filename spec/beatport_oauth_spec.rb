@@ -6,7 +6,7 @@ describe BeatportOauth do
   describe 'key, secret, username, password not set' do
     it 'raises an error' do
       expect {
-        BeatportOauth.get('/catalog/3/tracks?sortBy=releaseDate+ASC')
+        BeatportOauth.get('/catalog/3/tracks', { "sortBy" => "releaseDate ASC" })
       }.to raise_error(StandardError)
     end
   end
@@ -21,7 +21,7 @@ describe BeatportOauth do
 
     it 'raises an error' do
       expect {
-        BeatportOauth.get('/catalog/3/tracks?sortBy=releaseDate+ASC')
+        BeatportOauth.get('/catalog/3/tracks', { "sortBy" => "releaseDate ASC" })
       }.to raise_error(StandardError)
     end
   end
@@ -32,10 +32,6 @@ describe BeatportOauth do
       BeatportOauth.secret = "fake"
       BeatportOauth.username = "fake"
       BeatportOauth.password = "fake"
-    end
-
-    it "has a version number" do
-      expect(BeatportOauth::VERSION).to eq '0.1.0'
     end
 
     it 'gets an access token' do
@@ -49,7 +45,7 @@ describe BeatportOauth do
       before { BeatportOauth.access_token = BeatportOauth.get_access_token }
 
       it "can get a catalog page" do
-        expect(BeatportOauth.get('/catalog/3/tracks?sortBy=releaseDate+ASC').keys).to eq(["metadata", "results"])
+        expect(BeatportOauth.get('/catalog/3/tracks', { "sortBy" => "releaseDate ASC" }).keys).to eq(["metadata", "results"])
       end
     end
   end

@@ -51,7 +51,7 @@ If you are using Rails, I would highly suggest using Rails cache for this (which
 Now you can easily make requests:
 
 ```ruby
-BeatportOauth.get('/catalog/3/tracks?sortBy=releaseDate+ASC')
+BeatportOauth.get('/catalog/3/tracks', { "sortBy" => 'releaseDate ASC' })
 ```
 
 This will return a parsed Ruby Hash.

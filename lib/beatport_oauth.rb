@@ -16,9 +16,9 @@ module BeatportOauth
   class << self
     attr_accessor :key, :secret, :username, :password, :access_token
 
-    def get(uri)
+    def get(uri, params = nil)
       check_vars
-      JSON.parse(client.get(uri).body)
+      JSON.parse(client.get(uri_helper(uri, params)).body)
     end
 
     def check_vars
@@ -29,6 +29,12 @@ module BeatportOauth
         end
       end
       check_access_token
+    end
+
+    def uri_helper(uri, params)
+      uri = URI.parse(uri)
+      uri.query = URI.encode_www_form(params) unless params.nil?
+      uri.to_s
     end
 
     def check_access_token
